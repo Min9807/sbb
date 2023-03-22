@@ -35,7 +35,7 @@ public class UserController {
                     userCreateForm.getEmail(), userCreateForm.getPassword1());
         }catch (DataIntegrityViolationException e){
             e.printStackTrace();
-            bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.")
+            bindingResult.reject("signupFailed", "이미 등록된 사용자입니다.");
             return "signup_form";
         }catch (Exception e){
             e.printStackTrace();
