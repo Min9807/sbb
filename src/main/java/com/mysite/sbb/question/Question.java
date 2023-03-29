@@ -34,6 +34,9 @@ public class Question {
 
     private LocalDateTime modifyDate;
 
+    @Column(length = 20)
+    private String category;
+
     @ManyToMany
     Set<SiteUser> voter;
 }

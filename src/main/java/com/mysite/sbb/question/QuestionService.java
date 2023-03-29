@@ -68,8 +68,9 @@ public class QuestionService {
         }
     }
 
-    public void create(String subject, String content, SiteUser siteUser){
+    public void create(String category, String subject, String content, SiteUser siteUser){
         Question q = new Question();
+        q.setCategory(category);
         q.setSubject(subject);
         q.setContent(content);
         q.setAuthor(siteUser);
