@@ -93,4 +93,7 @@ public class QuestionService {
         questionRepository.save(question);
     }
 
+    public List<Question> getUserList(SiteUser user) {
+        return questionRepository.findByAuthor(user);
+    }
 }

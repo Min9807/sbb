@@ -1,6 +1,7 @@
 package com.mysite.sbb.question;
 
 import com.mysite.sbb.question.Question;
+import com.mysite.sbb.user.SiteUser;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -13,4 +14,5 @@ public interface QuestionRepository extends JpaRepository<Question, Integer> {
     List<Question> findBySubjectLike(String subject);
     Page<Question> findAll(Pageable pageable);
     Page<Question> findAll(Specification<Question> spec, Pageable pageable);
+    List<Question> findByAuthor(SiteUser author);
 }
